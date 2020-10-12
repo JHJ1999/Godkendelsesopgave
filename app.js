@@ -1,18 +1,20 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const users = require("./Routes/Users.js")
-const match = require("./Routes/Interest.js")
-const match = require("./Routes/Match.js")
+const express = require('express');
+const app = express();
+const port = 3000;
 
+const users = require("./Routes/Users.js");
+const interest = require("./Routes/Interest.js");
+const match = require("./Routes/Match.js");
+
+app.get('/', (req, res) => {res.send('Hello World!')})
 
 app.use("/Users", users);
 app.use("/Interest", interest);
-app.use("/Match", match)
+app.use("/Match", match);
 
 
 
-app.get('/', (req, res) => {res.send('Hello World!')})
+
 
 
 
