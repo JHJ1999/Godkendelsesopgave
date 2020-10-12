@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const interest = require("../Model/Interest.js")
 
 
 router.get("/", (req, res) => {
-    res.send("hello interest");
+    res.json();
 });
 
 

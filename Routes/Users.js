@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const Users = require("../Model/Users.js")
 
 
 router.get("/", (req, res) => {
-    res.send("hello get");
+    res.json(Users.myUsers);
 });
 
 
